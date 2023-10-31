@@ -1,4 +1,5 @@
 # Debug broken pipelines with Valohai
+**Expected Demo Time:** 13min
 
 This demo shows how to run a Valohai execution and attach a local debugger to it, allowing you to easily demonstrate how to use your local environment to debug a remote execution.
 
@@ -10,7 +11,7 @@ The customer has:
 
 ## Video
 
-*video content*
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/fc5dba0cc6f74a2684a21115a4089154?sid=ef205b73-b8f9-4d73-a023-059eec2f191d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## How to demo?
 
@@ -82,7 +83,7 @@ That's it for prep work.
 #### In VS Code
 1. Pull the commit that was used to run the failed job. For example:
     ``` bash
-    git checkout 6881723
+    git checkout bb2a58a
     ```
 1. Make a new branch for example `dd-demo-1`:
     ```bash
