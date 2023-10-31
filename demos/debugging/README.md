@@ -11,7 +11,8 @@ The customer has:
 
 ## Video
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/fc5dba0cc6f74a2684a21115a4089154?sid=ef205b73-b8f9-4d73-a023-059eec2f191d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/fc5dba0cc6f74a2684a21115a4089154-with-play.gif)](https://www.loom.com/embed/fc5dba0cc6f74a2684a21115a4089154?sid=ef205b73-b8f9-4d73-a023-059eec2f191d)
+
 
 ## How to demo?
 
