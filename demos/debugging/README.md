@@ -11,8 +11,7 @@ The customer has:
 
 ## Video
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/fc5dba0cc6f74a2684a21115a4089154-with-play.gif)](https://www.loom.com/embed/fc5dba0cc6f74a2684a21115a4089154?sid=ef205b73-b8f9-4d73-a023-059eec2f191d)
-
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/fc5dba0cc6f74a2684a21115a4089154-with-play.gif)](https://www.loom.com/share/fc5dba0cc6f74a2684a21115a4089154)
 
 ## How to demo?
 
@@ -29,7 +28,7 @@ The customer has:
 1. Launch the pipeline `broken-pipeline` **from the main branch** in the project and let it stop after train.
     * The pipeline stops because there's a condition saying, only continue to the inference step if the metric `precision` is over 0.6.
     * There a bug in the code where `precision` is always reported as 0. We'll use this example to debug the code and show we'd add that.
-1. Clone the repository to your local machine and open it in VS Code
+1. Clone the [valohai-academy-debugging repository](https://github.com/DrazenDodik/valohai-academy-debugging/tree/main) to your local machine and open it in VS Code
 1. Generate a new SSH key with:
     ```bash
     ssh-keygen -t rsa -b 4096 -N '' -f .my-debug-key
