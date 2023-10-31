@@ -3,6 +3,8 @@ This repository contains a collection of simple demos that you can use to show o
 
 Pick and choose the right demos from this repository.
 
+Each demo should be 6-10 min long to complete.
+
 ## Demos
 
 | Title           | Description     | Video           |
