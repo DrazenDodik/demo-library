@@ -9,6 +9,9 @@ The customer has:
 * questions about how Valohai jobs can be troubleshoot and debugged
 * a remote development environment, like [workspaces on cnvrg.io](https://app.cnvrg.io/docs/core_concepts/workspaces.html) and we want to show how easy it is to use a local development environment with Valohai.
 
+### When NOT to use this demo?
+This is a significantly longer and a more complex demo. Don't prioritise this demo unless the customer has a strong engineering focus and debugging or moving from a local -> cloud workflow has been raised as a major concern or issue.
+
 ## Video
 
 [![Watch the video](https://cdn.loom.com/sessions/thumbnails/fc5dba0cc6f74a2684a21115a4089154-with-play.gif)](https://www.loom.com/share/fc5dba0cc6f74a2684a21115a4089154)
