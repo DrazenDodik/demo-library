@@ -94,4 +94,78 @@ The tools that we have tested with LLMs are Torchrun and Accelerate. You can als
 
 #### Q3: Is Data Distributed Across Workers?
 
-Answer: Yes, users have the option to distribute data across workers in Valohai. Each worker can either download its own data or work with shared data, depending on the use case.
+Yes, users have the option to distribute data across workers in Valohai. In the distributing between machines case, every worker downloads the complete dataset from Valohai inputs. Subsequently, each worker engages in training on a specific segment of the partitioned dataset. The scripts, `train-torchrun.py` and `train-accelerator.py`, manage the data partition through distribution tools.
+#### Q4: Why Distributed Computing for LLMs:
+
+When is it essential to use distributed computing for fine-tuning LLMs?
+
+Distributed computing is essential when dealing with the computational intensity, resource efficiency, and scalability required for training large language models efficiently.
+
+Distributed computing is essential for fine-tuning LLMs when:
+* Handling large language models with a massive number of parameters.
+* Seeking computational efficiency and accelerated training.
+* Processing large datasets efficiently through parallel processing.
+* Addressing memory requirements exceeding the capacity of a single GPU or machine.
+* Scaling training for larger language models.
+
+#### Q5: Cost and Duration:
+In a comparison of using different machines for fine-tuning with the same data and parameters:
+
+**p3.8xlarge (GPU: Tesla V100) - distribute within one machine:**
+* Price: $13/h
+* Time Taken: ~25min
+*  Bill: $5.5
+
+**p3.2xlarge (GPU: Tesla V100) - distribute between few machines:**
+* Estimated Time: ~2.5h
+* Price: ~$3/h
+* Bill: $7.5/machine = $30
+
+**g4.xlarge (GPU: Tesla T4) - distribute between few machines:**
+* Price: $0.5/h
+* Estimated Time: ~4h
+* Estimated Bill: ~$2/machine = $8
+
+For the case when we distribute between few machines like `p3.2xlarge` or `g4.xlarge`, we have longer training time and spend more money.
+Let's see the factors affecting performance:
+
+* Communication Overhead: Distributing between machines introduces communication overhead as data needs to be transferred between them. This can lead to delays in synchronization and hinder overall training speed.
+* Data Transfer Latency: The need to transfer data between machines results in latency, impacting the training process. Small batch sizes and frequent data exchanges contribute to slower convergence.
+* Resource Isolation: Each machine operates independently with its own GPU. This isolation can lead to suboptimal resource utilization and slower convergence compared to a unified, multi-GPU setup.
+
+For the `p3.8xlarge` (Distributing within one machine between few GPUs):
+
+Factors Affecting Performance:
+
+* Unified Memory Access: In a single-machine, multi-GPU setup, all GPUs have unified access to the system memory. This allows for efficient data sharing and reduces the communication overhead compared to distributing between machines.
+* Parallel Processing: GPUs within the same machine can perform parallel processing more seamlessly as they share a common memory space. This results in faster model updates and shorter training times.
+* Coordinated Synchronization: Synchronization among GPUs in a single machine is more coordinated and efficient compared to communication between separate machines. This leads to faster convergence and reduced training times.
+
+
+#### Q6:  Master IP and Valohai Library:
+
+- Explain the significance of obtaining the master IP.
+- Do you always need to use the Valohai library for obtaining the master IP?
+  - **Answer:** The master IP is crucial for coordinating distributed training. While the Valohai library can be used (`valohai.distributed.master()`), the master IP can also be obtained from our JSON file during the execution.
+
+#### Q7: Distributed Computing Concepts (Rank and Averaging Gradients):
+
+- **Rank:** Refers to the unique identifier assigned to each process or machine in distributed computing - in our case it's the machine.
+- **Averaging Gradients:** In distributed training, it involves aggregating gradient updates from different machines to update the model parameters. So, on each step of the training we aggregate the gradients from all machines.
+
+#### Q8: UI Execution Count and Code Changes:
+
+Are code changes necessary when adjusting the execution count?
+  - Changing the execution count in the Valohai UI does not necessarily require code changes. For this demo you don't need to change any code to update the number of machines/GPUs to distribute between.
+    - For `train-torchrun.py` and `train-accelerator.py` you only need to change the parameter `--nproc-per-node=4` and `--num_processes=4` respectively in command section when creating the execution.
+    - For `train-task.py` change the `execution-count` when creating a Task.
+
+#### Q9: Huggingface Model Usage:
+
+Explain the importance of the "bart-large-cnn" model from Huggingface within the code.
+- The tokenizer and pretrained model is loaded from Huggingface by using these lines of code:
+```
+tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
+pretrained_model = AutoModelForSeq2SeqLM.from_pretrained(model_ckpt)
+```
+- You can path another model from Huggingface as a parameter.
