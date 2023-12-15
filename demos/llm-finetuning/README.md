@@ -1,6 +1,6 @@
 #  Distributed Fine-Tuning of Language Models (LLMs)
 
-**Expected Demo Time: 15min**
+**Expected Demo Time: 10min**
 
 This demo demonstrates how to perform fine-tuning of large language models (LLM) in
 a distributed manner.
