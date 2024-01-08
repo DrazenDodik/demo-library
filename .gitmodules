@@ -1,0 +1,3 @@
+[submodule "demos/dynamic-pipelines/dynamic-pipelines-demo"]
+	path = demos/dynamic-pipelines/dynamic-pipelines-demo
+	url = git@github.com:valohai/dynamic-pipelines-demo.git
