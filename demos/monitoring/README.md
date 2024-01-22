@@ -24,7 +24,7 @@ This demo is not suitable when:
 > We have an existing project that's connected to the right Git repository and allows you to demo this easily.
 
 ### Before the demo:
-Create a new Valohai project and connect it the [valohai-llms](https://github.com/SofiaChar/valohai-drift-detection) repository.
+Create a new Valohai project and connect it the [valohai-llms](https://github.com/valohai/drift-detection-example) repository.
 You can also use [this project](https://app.valohai.com/p/SharkOrg/drift-detection-demo/)
 
 #### Overview:
