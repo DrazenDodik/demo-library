@@ -18,9 +18,7 @@ The customer:
 
 ## Video
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/29ad4d6f5a18410cbd793421e14ead61-with-play.gif)
-    </a>
-  </div>)](https://www.loom.com/share/29ad4d6f5a18410cbd793421e14ead61)
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/29ad4d6f5a18410cbd793421e14ead61-with-play.gif)](https://www.loom.com/share/29ad4d6f5a18410cbd793421e14ead61)
 
 ## How to demo?
 - Start by showing a completed pipeline and talking about the fundamentals.
