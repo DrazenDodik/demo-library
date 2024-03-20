@@ -18,7 +18,9 @@ The customer:
 
 ## Video
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/29ad4d6f5a18410cbd793421e14ead61?sid=98a71e65-4894-4e74-9eaf-4e8ee70a6363" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/29ad4d6f5a18410cbd793421e14ead61-with-play.gif)
+    </a>
+  </div>)](https://www.loom.com/share/29ad4d6f5a18410cbd793421e14ead61)
 
 ## How to demo?
 - Start by showing a completed pipeline and talking about the fundamentals.
